@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
@@ -7,7 +7,7 @@ const SidebarLink = styled(Link)`
   color: #e1e9fc;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 10px;
   list-style: none;
   height: 60px;
   text-decoration: none;
@@ -25,7 +25,7 @@ const SidebarLabel = styled.span`
 `;
 
 const DropdownLink = styled(Link)`
-  background: ${(props) => (props.isOpen ? "#38b000" : "#252831")};
+  background: #252831;
   height: 60px;
   padding-left: 3rem;
   display: flex;
@@ -33,39 +33,26 @@ const DropdownLink = styled(Link)`
   text-decoration: none;
   color: #f5f5f5;
   font-size: 18px;
-  font-weight: bold; /* Make text bold for readability */
-
-  &:hover {
-    background: #38b000;
-    cursor: pointer;
-  }
 `;
 
 const SubMenu = ({ item }) => {
-  const [subnav, setSubnav] = useState(false);
-
-  const showSubnav = () => setSubnav(!subnav);
-
   return (
     <>
-      <SidebarLink to={item.path} onClick={item.subNav && showSubnav}>
+      <SidebarLink to={item.path}>
         <div>
           {item.icon}
           <SidebarLabel>{item.title}</SidebarLabel>
         </div>
-        <div>{item.subNav && (subnav ? item.iconOpened : item.iconClosed)}</div>
       </SidebarLink>
-      {subnav &&
-        item.subNav.map((item, index) => (
-          <DropdownLink
-            key={index}
-            to={item.path}
-            isOpen={subnav} // Pass subnav state to isOpen prop
-          >
-            {item.icon}
-            <SidebarLabel>{item.title}</SidebarLabel>
-          </DropdownLink>
-        ))}
+      {item.subNav &&
+        item.subNav.map((item, index) => {
+          return (
+            <DropdownLink to={item.path} key={index}>
+              {item.icon}
+              <SidebarLabel>{item.title}</SidebarLabel>
+            </DropdownLink>
+          );
+        })}
     </>
   );
 };

@@ -90,11 +90,11 @@ const AllOutput = () => {
           return (
             <div className="entry" key={index}>
               <div className="entryHeader">
-                <h3>{ipAddress}</h3>
+                <h3 style={{color:"#a16300" ,fontSize:"20px" }}>{ipAddress}</h3>
               </div>
               <div className="entryContent">
                 <div className="portSection">
-                  <h4>TCP Ports:</h4>
+                  <p>TCP PORTS : <br></br><br></br></p>
                   {tcp.map((port, idx) => {
                     const portParams = new URLSearchParams({
                       port: port.port,

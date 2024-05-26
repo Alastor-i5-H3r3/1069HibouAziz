@@ -16,66 +16,10 @@ export const SidebarData = [
 		icon: <FaChartPie />,
 	},
     {
-		title: "User",
-		path: "/user",
-		icon: <VscAccount />,
-	},
-    {
 		title: "All Output",
 		path: "/allOutput",
 		icon: <VscOutput />,
 	},
-    {
-		title: "Nmap Results",
-		path: "/nmap",
-		icon: <SiRetool />,
-		iconClosed: <RiIcons.RiArrowDownSFill />,
-		iconOpened: <RiIcons.RiArrowUpSFill />,
+    
 
-		subNav: [
-			{
-				title: "TCP Scan",
-				path: "/nmap/nmap1",
-				icon: <IoIcons.IoIosPaper />,
-				cName: "sub-nav",
-			},
-            
-			{
-				title: "UDP Scan",
-				path: "/nmap/nmap2",
-				icon: <IoIcons.IoIosPaper />,
-				cName: "sub-nav",
-			},
-			
-		],
-	},
-	{
-		title: "Vulnerability Result",
-		path: "/vuln",
-		icon: <GrVulnerability />,
-
-		iconClosed: <RiIcons.RiArrowDownSFill />,
-		iconOpened: <RiIcons.RiArrowUpSFill />,
-
-		subNav: [
-			{
-				title: "HTTP",
-				path: "/vuln/vuln1",
-				icon: <IoIcons.IoIosPaper />,
-				cName: "sub-nav",
-			},
-			{
-				title: "SMB",
-				path: "/vuln/vuln2",
-				icon: <IoIcons.IoIosPaper />,
-				cName: "sub-nav",
-			},
-            {
-				title: "FTP",
-				path: "/vuln/vuln3",
-				icon: <IoIcons.IoIosPaper />,
-				cName: "sub-nav",
-			},
-		],
-	},
 ];

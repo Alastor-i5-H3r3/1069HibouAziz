@@ -1,7 +1,8 @@
 .details {
   margin-left: 260px; /* Align with the margin of the main content */
-  padding: 20px;
-  font-family: Arial, sans-serif;
+  padding: 5%;
+  background-color: #f2f2f2;
+  height: 3000px;
 }
 
 .details h1 {
@@ -23,7 +24,7 @@
   font-size: 1.1rem;
   margin-top: 15px;
   cursor: pointer; /* Change cursor to pointer for clickable effect */
-  color: #096203; /* Change color for better visibility */
+  color: #008839ee; /* Change color for better visibility */
 }
 
 .details p, .details .no-details {
@@ -32,9 +33,9 @@
 }
 
 .details pre {
-  background-color: #f4f4f4;
+  background-color: #e6e6e6;
   padding: 15px;
-  border: 1px solid #ddd;
+  border: 1px solid #d3d3d3c9;
   border-radius: 5px;
   overflow-x: auto;
   white-space: pre-wrap; /* Wrap text */
@@ -53,6 +54,3 @@
   margin-bottom: 5px;
 }
 
-.clickable {
-  text-decoration: underline;
-}

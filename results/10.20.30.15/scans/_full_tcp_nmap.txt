@@ -1,1 +1,0 @@
-# Nmap 7.94SVN scan initiated Fri May 10 11:32:36 2024 as: nmap -vv --reason -Pn -T4 -sV -sC --version-all -A --osscan-guess -p- -oN /home/kali/Downloads/web/react-sidebar-dropdown/results/10.20.30.15/scans/_full_tcp_nmap.txt -oX /home/kali/Downloads/web/react-sidebar-dropdown/results/10.20.30.15/scans/xml/_full_tcp_nmap.xml 10.20.30.15
